@@ -24,20 +24,20 @@ def bear_room():
     bear_moved = False
 
     while True:
-      choice = input("> ")
+        choice = input("> ")
     
-      if choice == "take honey":
-          dead("The bear looks at you then slaps your face off.")
-      elif choice == "taunt bear" and not bear_moved:
-                  print("The bear has moved from the door.")
-                  print("You can go through it now.")
-                  bear_moved = True
-                  if-else choice == "taunt bear" and bear_moved:
-                  dead("The bear gets pissed off and chews your leg off."
-                     elif choice == "open door" and bear_moved:
-                          gold_room()
-                        else:
-                          print("I got no idea what that means.")
+        if choice == "take honey":
+            dead("The bear looks at you then slaps your face off.")
+        elif choice == "taunt bear" and not bear_moved:
+            print("The bear has moved from the door.")
+            print("You can go through it now.")
+            bear_moved = True
+        elif choice == "taunt bear" and bear_moved:
+            dead("The bear gets pissed off and chews your leg off.")
+        elif choice == "open door" and bear_moved:
+            gold_room()
+        else:
+            print("I got no idea what that means.")
                       
                       
 def cthulhu_room():
@@ -54,11 +54,11 @@ def cthulhu_room():
      else:
         cthulhu_room()
                           
- def dead(why):
+def dead(why):
      print(why, "Good job!")
      exit(0)
                           
- def start():
+def start():
      print("You are in a dark room.")
      print("There is a door to your right and left.")
      print("Which one do you take?")
@@ -66,9 +66,9 @@ def cthulhu_room():
      choice = input("> ")
                           
      if choice == "left":
-         bear_room()
-    elif choice == "right":
-         cthulhu_room()
+        bear_room()
+     elif choice == "right":
+        cthulhu_room()
      else:
          dead("You stumble around the room until you starve.")
 

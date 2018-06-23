@@ -14,7 +14,7 @@ class Engine(object):
     def __init__(self, scene_map):
         self.scene_map = scene_map
 
-    def play(self):
+    def play(self, next_scene=None):
         current_scene = self.scene_map.opening_scene()
         last_scene = self.scene_map.next_scene('finished')
         while current_scene != last_scene:
@@ -55,7 +55,7 @@ class LaserWeaponArmory(Scene):
     def enter(self):
         print(dedent("""You do a dive roll into the Weapon Armory, crouch and see the room for more Gothons that might be hiding. It's dead quiet, too quiet. You stand up and run to the far side of the room and find the neutron bomb in its container.There's a keypad lock on the box and you need the code to get the bomb out. If you get the code wrong 10 times thlock closes forever and you can't get the bomb. The code is 3 digits. """))
         code = f"{randint(1,9)}{randint(1,9)}{randint(1,9)}"
-        guess = input("[keypad]> "
+        guess = input("[keypad]> ")
         guesses = 0
         while guess != code and guesses < 10:
             print("BZZZZEDDD!")
@@ -72,10 +72,10 @@ class TheBridge(Scene):
           print(dedent("""In a panic you throw the bomb at the group and make a leap for the door. Right as you drop it Gothon shoots you right in the back killing you. As you die you see another Gothon frantically try to disarm the bomb. You die knowing they will probably blow up when it goes off.  """))
           return 'death'
 
-    elif action == "slowly place the bomb":
+     elif action == "slowly place the bomb":
          print(dedent("""You point your blaster at the bomb under your arm and the Gothons put their hands up and start to sweat.You inch backward to the door, open it, and then carefully place the bomb on the floor, pointing you blaster at it. You then jump back through the door,punch the close button and blast the lock so the Gothons can't get out. Now that the bomb is placed you run to the escape pod to get off this tin can. """))
          return 'escape_pod'
-    else:
+     else:
          print("DOES NOT COMPUTE!")
          return "the_bridge"
 
@@ -87,7 +87,7 @@ class EscapePod(Scene):
       if int(guess) != good_pod:
          print(dedent("""You jump into pod {guess} and hit the eject button .The pod escapes out into the void of space, then implodes as the hull ruptures, crushing your body into implodes as the hull ruptures, jam jelly. """))
          return 'death'
-     else:
+      else:
          print(dedent("""You jump into pod {guess} and hit the eject button.The pod easily slides out into space heading to the planet below. As it flies to the planet, back and see your ship implode then explode like a bright star, taking out the Gothon ship at the same time. You won! """))
          return 'finished'
 class Finished(Scene):

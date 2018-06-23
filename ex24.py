@@ -9,11 +9,8 @@ cannot discern \n the needs of love
 nor comprehend passion for intuition
 and requires an explanation
 \n\t\twhere there is none.
+  """
 print(poem)
-
-
-
-
 
 five=10-2+3-6
 print(f"This should be five:{five}")

@@ -35,23 +35,23 @@ def convert(snippet, phrase):
     results = []
     param_names = []
 
-   for i in range(0, snippet.count("@@@")):
-       param_count = random.randint(1,3)
-       param_names.append(', ' .join(random.sample(WORDS, param_count)))
+    for i in range(0, snippet.count("@@@")):
+        param_count = random.randint(1,3)
+        param_names.append(', ' .join(random.sample(WORDS, param_count)))
 
-   for sentence in snippet, phrase:
-       result = sentence[:]
+    for sentence in snippet, phrase:
+        result = sentence[:]
 
-       # fake class names
-       for word in class_names:
+
+        for word in class_names:
            result = result.replace("%%%", word, 1)
 
-       # fake other names
-       for word in other_names:
+
+        for word in other_names:
            result = result.replace("***", word, 1)
 
-       # fake parameter lists
-       for word in param_names:
+
+        for word in param_names:
            result = result.replace("@@@", word, 1)
 
         results.append(result)

@@ -11,13 +11,13 @@ if door == "1":
 
     bear = input("> ")
 
-if bear == "1":
-    print("The bear eats your face off.Good job!")
-elif bear == "2":
-    print("The bear eats your legs off.Good job!")
-else:
-    print(f"Well,doing {bear} is probably better.")
-    print("Bear runs away.")
+    if bear == "1":
+        print("The bear eats your face off.Good job!")
+    elif bear == "2":
+        print("The bear eats your legs off.Good job!")
+    else:
+        print(f"Well,doing {bear} is probably better.")
+        print("Bear runs away.")
 
 elif door == "2":
     print("You stare into the endless abysss at Cthulhu's ret")
@@ -25,14 +25,14 @@ elif door == "2":
     print("2. Yellow jacket clothespins.")
     print("3. Understanding revolvers yelling melodies.")
 
-insanity = input("> ")
+    insanity = input("> ")
 
-if insanity == "1" or inanity == "2":
-    print("Your body survives powered by a mind of jello")
-    print("Good job!")
-else:
-    print("The insanity roots your ebes into a pool of mu")
-    print("Good job!")
+    if insanity == "1" or insanity == "2":
+        print("Your body survives powered by a mind of jello")
+        print("Good job!")
+    else:
+        print("The insanity roots your ebes into a pool of mu")
+        print("Good job!")
 
 else:
     print("You stumble around and fall on a knife and die.G")

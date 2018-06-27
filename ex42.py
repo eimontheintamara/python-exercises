@@ -5,33 +5,33 @@ class Animal(object):
 ## ??
 class Dog(Animal):
 
-    def __init__(self,name):
+    def __init__(self, name):
         ## ??
-        self.name=name
+        self.name = name
 ## ??
 
 class Cat(Animal):
 
-    def __init__(self,name):
+    def __init__(self, name):
         ## ??
-        self.name=name
+        self.name = name
 ## ??
 class Person(object):
 
-    def __init__(self,name):
+    def __init__(self, name):
         ## ??
-        self.name=name
+        self.name = name
 
         ## person has a pet of some kind
-        self.pet=None
+        self.pet = None
 ## ??
 class Employee(Person):
 
-    def __init__(self,name,salary):
+    def __init__(self, name,salary):
         ## ?? hmm what is this strange magic?
         super(Employee,self).__init__(name)
         ## ??
-        self.salary=salary
+        self.salary = salary
  ## ??
 class Fish(object):
     pass
@@ -57,7 +57,7 @@ eimon = Person("EiMon")
 eimon.pet = satan
 
 ## ??
-frank = Employee("Frank",120000)
+frank = Employee("Frank", 120000)
 
 ## ??
 frank.pet = rover
